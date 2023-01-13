@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>M3 - ABP AE1</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <style>
+    #figuras {
+      list-style: none;
+    }
+
+    
+    .arriba {
+      transform: scale(1.2);
+    }
+
+    .abajo {
+      transform: scale(0.8);
+    }
+    .borde{
+      border: 1px solid red;
+    }
+    #fotos{
+      width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+
+</head>
+
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+  <div class="text-center">
+    <map name="mapa" class="figuras">
+      <area shape="circle" coords="40,100,15" href="" onmouseover="dentro(0)" onmouseout="fuera()" />
+      <area shape="circle" coords="90,100,15" href="" onmouseover="dentro(1)" onmouseout="fuera()" />
+      <area shape="rectangle" coords="150,50,230,130" href="" onmouseover="dentro(2)" onmouseout="fuera()" />
+      <area shape="rectangle" coords="270,50,390,150" href="" onmouseover="dentro(3)" onmouseout="fuera()"/>
+      <area shape="rectangle" coords="400,100,490,160" href="" onmouseover="dentro(4)" onmouseout="fuera()" />
+      <area shape="circle" coords="510,140,20" href="" onmouseover="dentro(5)" onmouseout="fuera()"/>
+      <area shape="circle" coords="550,130,20" href="" onmouseover="dentro(6)" onmouseout="fuera()"/>
+      <area shape="circle" coords="580,140,20" href="" onmouseover="dentro(7)" onmouseout="fuera()"/>
+      <area shape="circle" coords="620,160,20" href="" onmouseover="dentro(8)" onmouseout="fuera()"/>
+      <area shape="circle" coords="660,170,15" href="" onmouseover="dentro(9)" onmouseout="fuera()"/>
+      <area shape="circle" coords="695,170,15" href="" onmouseover="dentro(10)" onmouseout="fuera()"/>
+      <area shape="circle" coords="750,180,30" href="" onmouseover="dentro(11)" onmouseout="fuera()"/>
+      <area shape="circle" coords="800,190,15" href="" onmouseover="dentro(12)" onmouseout="fuera()"/>
+      <area shape="rectangle" coords="825,175,925,215" href="" onmouseover="dentro(13)" onmouseout="fuera()"/>
+      <area shape="rectangle" coords="950,175,1155,255" href="" onmouseover="dentro(14)" onmouseout="fuera()"/>
+      <area shape="rectangle" coords="1180,125,1450,255" href="" onmouseover="dentro(15)" onmouseout="fuera()"/>
+    </map>
+  </map>
+   >
+    <img src="https://aprotur.cl/wp-content/uploads/2020/07/sur.png" usemap="#mapa">
+  </div>
+
+  <div class="container text-center" id="contenedor">
+
+    <div class="card">
+      
+      <img id="fotos" src="..." class="card-img-top shadow" alt="...">
+      <div class="card-body">
+        <h5 id="nameRegion" class="card-title">Región:</h5>
+        <p class="card-text" id="atractivos">Atractivos: </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="texto"> </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+    <script src="./js/regiones.js"></script>
+</body>
+
+<script>
+  $("area").hover(function () {
+    $(this).toggleClass('arriba').siblings().toggleClass('abajo')
+  })</script>
+
+</html>
